@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { decrement, increment, reset } from '../../store/counter.action';
+import { counterModel } from '../../store/counter.state';
 
 @Component({
   selector: 'app-counter',
@@ -8,7 +9,7 @@ import { decrement, increment, reset } from '../../store/counter.action';
   styleUrl: './counter.component.scss'
 })
 export class CounterComponent {
-  constructor(private store:Store<{counter:{counter:number}}>){
+  constructor(private store:Store<{counter:counterModel}>){
 
   }
 
